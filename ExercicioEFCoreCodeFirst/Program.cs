@@ -21,6 +21,7 @@ namespace ExercicioEFCoreCodeFirst
                 #endregion
                 #region consultas
 
+                //Listar o elenco de um determinado filme
                 Console.WriteLine();
                 Console.WriteLine("Todo o elenco do filme Jurassic Park (press any key...):");
                 Console.ReadKey();
@@ -35,7 +36,8 @@ namespace ExercicioEFCoreCodeFirst
                     Console.WriteLine("{0} \t {1}", e.Character, e.Name);
                 }
 
-
+                //Listar todos os atores que já desempenharam um determinado personagem (por exemplo, quem
+                //foram todos os “agentes 007”?)
                 Console.WriteLine();
                 Console.WriteLine("Todos os atores que fizeram o Agente 007 James Bond (press any key...):");
                 Console.ReadKey();
@@ -49,10 +51,20 @@ namespace ExercicioEFCoreCodeFirst
                     Console.WriteLine("{0}", j.Key);
                 }
 
+                //Informar qual o ator desempenhou mais vezes um determinado personagem (qual o ator que
+                //realizou mais filmes como o “agente 007”)
+                Console.WriteLine();
+                Console.WriteLine("Todos os atores que fizeram o Agente 007 James Bond (press any key...):");
+                Console.ReadKey();
+                var agente = from am in db.Characters
+                             join ac in db.Actors on am.ActorId equals ac.ActorId
+                             where am.Character == "James Bond"
+                             group ac by ac.Name;
 
-
-
-
+                foreach (var j in agente)
+                {
+                    Console.WriteLine("{0}", j.Key);
+                }
 
                 Console.WriteLine();
                 Console.WriteLine("Todos os gêneros da base de dados (press any key...):");

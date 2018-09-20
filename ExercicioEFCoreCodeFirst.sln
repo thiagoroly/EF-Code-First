@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioEFCoreCodeFirst", "ExercicioEFCoreCodeFirst\ExercicioEFCoreCodeFirst.csproj", "{8B94E859-02EF-42A1-A00F-A86EB8BC6B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMovies", "MVCMovies\MVCMovies.csproj", "{9990D68C-1271-4D20-A920-A0DEB0036690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8B94E859-02EF-42A1-A00F-A86EB8BC6B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B94E859-02EF-42A1-A00F-A86EB8BC6B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B94E859-02EF-42A1-A00F-A86EB8BC6B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9990D68C-1271-4D20-A920-A0DEB0036690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9990D68C-1271-4D20-A920-A0DEB0036690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9990D68C-1271-4D20-A920-A0DEB0036690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9990D68C-1271-4D20-A920-A0DEB0036690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

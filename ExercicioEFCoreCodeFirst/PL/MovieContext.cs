@@ -9,7 +9,11 @@ namespace ExercicioEFCoreCodeFirst.PL
         //public static readonly LoggerFactory FabricaLogger = new LoggerFactory(new[] { new
         //ConsoleLoggerProvider((_, __) => true, true) });
 
-        public DbSet<Movie> Movies { get; set; }
+        public MovieContext() { }
+
+        public MovieContext(DbContextOptions<MovieContext> options) : base(options) { }
+        
+            public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorMovie> Characters { get; set; }
@@ -17,7 +21,7 @@ namespace ExercicioEFCoreCodeFirst.PL
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-           // .UseLoggerFactory(FabricaLogger)
+           //.UseLoggerFactory(FabricaLogger)
 
            .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=DBMovieCF;Trusted_Connection=True;");
         }
